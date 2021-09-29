@@ -2,47 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* .button-dark,
-.button-light {
-  position: relative;
-  color: white;
-  border: 1px solid white;
-  padding: 12px 5px 12px 5px;
-  height: 2.5rem;
-  width: 18rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+body {
+  background: #fffef4;
 }
-
-.button-light:hover {
-  background: white;
-  color: #002159;
-}
-
-.button-dark {
-  background: #002159;
-  border: 0;
-}
-
-.button-dark:hover {
-  background: #001c4c;
-}
-
-.button-outer-dark,
-.button-outer-light {
-  position: absolute;
-  border: 1px solid white;
-  border-top: 0;
-  border-left: 0;
-  width: 100%;
-  height: 100%;
-  top: 3px;
-  left: 3px;
-}
-
-.button-outer-dark {
-  border: 1px solid #002159;
-  border-top: 0;
-  border-left: 0;
-} */

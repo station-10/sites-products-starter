@@ -1,3 +1,6 @@
 {
-  "name": "Carluccio's"
+  "name": "Carluccio's",
+  "color_palette": {
+    "primary": "#000000"
+  }
 }

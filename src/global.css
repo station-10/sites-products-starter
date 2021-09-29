@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-.button-dark,
+/* .button-dark,
 .button-light {
   position: relative;
   color: white;
@@ -45,4 +45,4 @@
   border: 1px solid #002159;
   border-top: 0;
   border-left: 0;
-}
+} */

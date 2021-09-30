@@ -1,9 +1,16 @@
-import './global.css';
+import "./global.css";
 
 function importAll(r) {
-    let images = {};
-    r.keys().map((item, index) => { images[item.replace('./', '')] = r(item); });
-    return images;
-  }
-  
-  const images = importAll(require.context('./images', false, /\.(png|jpe?g|svg)$/));
+  let images = {};
+  r.keys().map((item, index) => {
+    images[item.replace("./", "")] = r(item);
+  });
+  return images;
+}
+
+const images = importAll(
+  require.context("./images", false, /\.(png|jpe?g|svg)$/)
+);
+const icons = importAll(
+  require.context("./icons", false, /\.(png|jpe?g|svg)$/)
+);

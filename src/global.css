@@ -2,7 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: acumin;
+  src: url(./fonts/AcuminVariableConcept.otf) format("opentype");
+}
+@font-face {
+  font-family: bodoni;
+  src: url(./fonts/Bodoni\ Moda_regular.ttf) format("truetype"),
+    url(./fonts/Bodoni\ Moda_800.ttf) format("truetype");
+}
+
 body {
+  font-family: bodoni;
   background: #fffef4;
 }
 
@@ -15,5 +26,5 @@ h2 {
 }
 
 h3 {
-  font-size: 1.5rem;
+  font-size: 2rem;
 }

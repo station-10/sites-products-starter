@@ -14,3 +14,4 @@ const images = importAll(
 const icons = importAll(
   require.context("./icons", false, /\.(png|jpe?g|svg)$/)
 );
+const fonts = importAll(require.context("./fonts", false, /\.(otf|ttf)$/));

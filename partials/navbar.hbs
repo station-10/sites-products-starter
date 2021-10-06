@@ -1,46 +1,111 @@
 <!--Nav-->
-<nav id="header" class="fixed w-full z-30 top-0 py-1 shadow bg-white">
-  <div
-    class="relative w-full container mx-auto flex flex-wrap items-center justify-center mt-0 px-6 my-3"
-  >
-    <div
-      class="hidden md:flex md:justify-center md:items-center md:w-auto w-full order-3 md:order-1"
-      id="menu"
-    >
-      <nav>
-        <a href="https://www.carluccios.com/" class="w-full flex justify-center">
-          <img
-            class="h-20 w-auto" src="/images/logo-dark.png"
-          ></img>
-
-        </a>
-        <ul
-          class="md:flex items-center justify-between text-base text-gray-700 pt-4 md:pt-0"
-        >
-          <li><a
-              class="inline-block no-underline hover:text-black hover:underline py-2 px-4"
-              href="https://www.carluccios.com/menu/"
-            >MENU</a></li>
-          <li><a
-              class="inline-block no-underline hover:text-black hover:underline py-2 px-4"
-              href="https://www.carluccios.com/delivery/"
-            >DELIVERY</a></li>
-          <li><a
-              class="inline-block no-underline hover:text-black hover:underline py-2 px-4"
-              href="https://www.carluccios.com/reservations/"
-            >BOOK A TABLE</a></li>
-          <li><a
-              class="inline-block no-underline hover:text-black hover:underline py-2 px-4"
-              href="https://www.carluccios.com/careers/"
-            >JOBS</a></li>
-        </ul>
-      </nav>
+<nav id="header" >
+  <div class="fixed flex items-center w-full z-30 top-0 py-1 shadow bg-white">
+    <div class="mx-10 lg:mx-40 hidden md:flex h-10">
+      <a href="https://www.carluccios.com/" class="mr-10">
+        <img
+          class="h-10" src="/images/logo-dark.png"
+        ></img>
+      </a>
+      <ul
+        class="flex items-center text-base text-gray-700 pt-4 md:pt-0"
+      >
+        <li><a
+            class="inline-block no-underline hover:text-black hover:underline py-2 px-4"
+            href="https://www.carluccios.com/menu/"
+          >MENU</a></li>
+        <li><a
+            class="inline-block no-underline hover:text-black hover:underline py-2 px-4"
+            href="https://www.carluccios.com/delivery/"
+          >DELIVERY</a></li>
+        <li><a
+            class="inline-block whitespace-nowrap no-underline hover:text-black hover:underline py-2 px-4"
+            href="https://www.carluccios.com/reservations/"
+          >BOOK A TABLE</a></li>
+        <li><a
+            class="inline-block no-underline hover:text-black hover:underline py-2 px-4"
+            href="https://www.carluccios.com/careers/"
+          >JOBS</a></li>
+      </ul>
     </div>
-
-    <div class="absolute right-1 top-1 flex items-center" id="nav-content">
-        {{>icon source="./images/twitter.svg" href="https://twitter.com/carluccios/"}}
-        {{>icon source="./images/instagram.svg" href="https://www.instagram.com/carluccios/"}}
-        {{>icon source="./images/facebook.svg" href="https://www.facebook.com/carluccios/"}}
+    <div class="md:hidden flex w-full mx-10 justify-between items-center">
+      <a href="https://www.carluccios.com/" class="mr-10">
+        <img
+          class="h-10" src="/images/logo-dark.png"
+        ></img>
+      </a>
+      <button class="outline-none mobile-menu-button-closed">
+        <svg
+          class="w-6 h-6 text-gray-500"
+          x-show="!showMenu"
+          fill="none"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+        <path d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+      <button class="hidden outline-none mobile-menu-button-open">
+        <svg version="1.0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" preserveAspectRatio="xMidYMid " class="svg h-4 w-4 text-gray-500">
+          <g transform="translate(0.000000,300.000000) scale(0.100000,-0.100000)" fill="#343434" stroke="none">
+          <path class="node" id="node1" d="M2700 2989 c-27 -8 -172 -148 -617 -591 -533 -532 -584 -580 -600
+          -567 -10 8 -267 263 -572 567 -584 585 -593 592 -682 592 -111 0 -218 -106
+          -219 -216 0 -92 7 -101 593 -687 304 -303 558 -560 566 -570 13 -16 -36 -68
+          -566 -600 -536 -538 -581 -586 -593 -629 -38 -142 48 -275 186 -286 111 -9 91
+          -26 723 605 316 315 578 573 583 573 5 0 256 -247 558 -548 339 -340 562 -555
+          585 -566 75 -36 181 -19 243 38 69 62 87 192 38 266 -14 22 -269 282 -566 579
+          -297 297 -540 544 -540 549 0 5 251 261 558 568 307 308 571 577 588 598 26
+          36 29 47 29 116 0 67 -4 82 -28 118 -42 64 -97 96 -171 99 -33 1 -77 -3 -96
+          -8z"></path>
+          </g>
+          <g transform="translate(0.000000,300.000000) scale(0.100000,-0.100000)" fill="#C7C7C7" stroke="none">
+          </g>
+        </svg>
+      </button>
     </div>
   </div>
+  <div class="hidden md:hidden fixed mobile-menu z-50 w-full pt-4 px-10 bg-white">
+    <ul
+    class="flex flex-col text-base bg-white text-gray-700 md:pt-0"
+    >
+      <li><a
+          class="inline-block no-underline hover:text-black hover:underline py-2 px-4"
+          href="https://www.carluccios.com/menu/"
+        >MENU</a></li>
+      <li><a
+          class="inline-block no-underline hover:text-black hover:underline py-2 px-4"
+          href="https://www.carluccios.com/delivery/"
+        >DELIVERY</a></li>
+      <li><a
+          class="inline-block whitespace-nowrap no-underline hover:text-black hover:underline py-2 px-4"
+          href="https://www.carluccios.com/reservations/"
+        >BOOK A TABLE</a></li>
+      <li><a
+          class="inline-block no-underline hover:text-black hover:underline py-2 px-4"
+          href="https://www.carluccios.com/careers/"
+        >JOBS</a></li>
+    </ul>
+  </div>
 </nav>
+
+<script>
+  const menu = document.querySelector(".mobile-menu");
+  const btnOpen = document.querySelector("button.mobile-menu-button-open")
+  const btnClosed = document.querySelector("button.mobile-menu-button-closed")
+
+  btnClosed.addEventListener("click", () => {
+    menu.classList.toggle("hidden")
+    btnOpen.classList.toggle("hidden")
+    btnClosed.classList.toggle("hidden")
+  })
+
+  btnOpen.addEventListener("click", () => {
+    menu.classList.toggle("hidden")
+    btnOpen.classList.toggle("hidden")
+    btnClosed.classList.toggle("hidden")
+  })
+
+</script>

@@ -1,20 +1,20 @@
 <footer
   class="w-full bg-primaryLight border-gray-400"
 >
-  <div class="flex w-full justify-between items-start px-80 pt-5 text-white">
+  <div class="xl:flex w-full justify-between items-start px-10 lg:px-80 pt-5 pb-10 text-white">
       <div class="flex">
           {{>icon source="./images/twitter.svg" href="https://twitter.com/carluccios/"}}
           {{>icon source="./images/instagram.svg" href="https://www.instagram.com/carluccios/"}}
           {{>icon source="./images/facebook.svg" href="https://www.facebook.com/carluccios/"}}
       </div>
-    <div class="flex">
-        <ul class="mx-10">
+    <div class="lg:flex">
+        <ul class="xl:mx-10">
             {{>footerLink text="CONTACT US" href="https://www.carluccios.com/contact/"}}
             {{>footerLink text="DELIVERY AND RETURNS" href="https://www.carluccios.com/delivery/"}}
             {{>footerLink text="SOCIAL RESPONSIBILITY" href="https://www.carluccios.com/social-responsibility/"}}
             {{>footerLink text="FEEDBACK" href="https://feeditback.to/carluccios"}}
         </ul>
-        <ul class="mx-10">
+        <ul class="xl:mx-10">
             {{>footerLink text="FAQs" href="https://www.carluccios.com/faqs/"}}
             {{>footerLink text="PARTNERSHIPS" href="https://www.carluccios.com/our-partnerships/"}}
             {{>footerLink text="GIFTCARD TERMS" href="https://www.carluccios.com/giftcard/"}}
@@ -22,8 +22,8 @@
         </ul>
     </div>
   </div>
-  <div class="flex w-full justify-between bg-primary px-80 text-white">
-      <ul class="flex">
+  <div class="flex flex-col lg:flex-row w-full items-center justify-between bg-primary lg:px-80 pt-4 text-white">
+      <ul class="flex flex-col lg:flex-row text-center mb-6">
         {{>footerLink text="Privacy & Legals" href="https://www.carluccios.com/legal/"}}
         {{>footerLink text="Tipping Policy" href="https://www.carluccios.com/legal/tipping-policy/"}}
         {{>footerLink text="Head Office" href="https://www.carluccios.com/head-office/"}}

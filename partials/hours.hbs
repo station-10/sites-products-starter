@@ -1,0 +1,48 @@
+<div class="flex">
+  <ul class="flex flex-col text-right mr-4">
+    <p>Monday</p>
+    <p>Tuesday</p>
+    <p>Wednesday</p>
+    <p>Thursday</p>
+    <p>Friday</p>
+    <p>Saturday</p>
+    <p>Sunday</p>
+  </ul>
+  <ul>
+    <li>
+      {{#each this.monday.openIntervals}}
+        <p>{{this.start}}-{{this.end}}</p>
+      {{/each}}
+    </li>
+    <li>
+      {{#each this.tuesday.openIntervals}}
+        <p>{{this.start}}-{{this.end}}</p>
+      {{/each}}
+    </li>
+    <li>
+      {{#each this.wednesday.openIntervals}}
+        <p>{{this.start}}-{{this.end}}</p>
+      {{/each}}
+    </li>
+    <li>
+      {{#each this.thursday.openIntervals}}
+        <p>{{this.start}}-{{this.end}}</p>
+      {{/each}}
+    </li>
+    <li>
+      {{#each this.friday.openIntervals}}
+        <p>{{this.start}}-{{this.end}}</p>
+      {{/each}}
+    </li>
+    <li>
+      {{#each this.saturday.openIntervals}}
+        <p>{{this.start}}-{{this.end}}</p>
+      {{/each}}
+    </li>
+    <li>
+      {{#each this.sunday.openIntervals}}
+        <p>{{this.start}}-{{this.end}}</p>
+      {{/each}}
+    </li>
+  </ul>
+</div>

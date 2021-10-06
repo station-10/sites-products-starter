@@ -1,7 +1,13 @@
 <div style="margin: 0px 3px;">
   <a href={{this.href}}>
-    <div class="bg-primary" style="padding:7px; border-radius:99999px;">
-      <img src={{this.source}} style="height:1.25rem;" />
-    </div>
+    {{#if this.noBg}}
+      <div style="padding:7px; border-radius:99999px;">
+        <img src={{this.source}} style="height:1.25rem;" />
+      </div>
+    {{else}}
+      <div class="bg-primary" style="padding:7px; border-radius:99999px;">
+        <img src={{this.source}} style="height:1.25rem;" />
+      </div>
+    {{/if}}
   </a>
 </div>

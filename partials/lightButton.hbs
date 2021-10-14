@@ -1,6 +1,6 @@
 {{#if darkBorder}}
   <a
-    class="bg-transparent hover:bg-primary max-w-xs relative flex items-center justify-center h-10 pt-5 pb-5 pl-10 pr-10 text-primary hover:text-white border-1 border-primary"
+    class="bg-transparent hover:bg-primary max-w-xs relative flex items-center justify-center h-10 pt-5 pb-5 pl-10 pr-10 text-primary whitespace-nowrap hover:text-white border-1 border-primary"
     href={{this.href}}
   >
     <p class="">{{this.text}}</p>
@@ -11,7 +11,7 @@
   </a>
 {{else}}
   <a
-    class="bg-transparent hover:bg-white relative max-w-xs flex items-center justify-center h-10 pt-5 pb-5 pl-10 pr-10 text-white hover:text-primary border-1 border-white"
+    class="bg-transparent hover:bg-white relative max-w-xs flex items-center justify-center h-10 pt-5 pb-5 pl-10 pr-10 text-white whitespace-nowrap hover:text-primary border-1 border-white"
     href={{this.href}}
   >
     <p class="">{{this.text}}</p>

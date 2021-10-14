@@ -1,30 +1,41 @@
 const path = require("path");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
-const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 
 module.exports = {
   mode: "production",
+  plugins: [new MiniCssExtractPlugin()],
   entry: {
     index: "./src/index.js",
+    locator: "./src/locator.ts",
   },
   output: {
-    filename: "index.bundle.js",
+    filename: "[name].js",
     path: path.resolve(__dirname, "assets"),
     clean: true,
   },
-  //   plugins: [
-  //     new HtmlWebpackPlugin({
-  //       template: "./src/template.html",
-  //     }),
-  //     new CleanWebpackPlugin()
-  // ],
+  resolve: {
+    extensions: [".ts", ".js", ".json"],
+  },
+  devtool: "inline-source-map",
   module: {
     rules: [
+      {
+        loader: "babel-loader",
+        options: {
+          presets: ["@babel/preset-env"],
+        },
+      },
+      {
+        test: /\.tsx?$/,
+        use: "ts-loader",
+        exclude: /node_modules/,
+      },
       {
         test: /\.css$/,
         use: [
           // Order is last to first
-          "style-loader",
+          MiniCssExtractPlugin.loader,
           {
             loader: "css-loader",
             options: {
@@ -58,5 +69,11 @@ module.exports = {
         ],
       },
     ],
+  },
+  optimization: {
+    minimizer: [new CssMinimizerPlugin(), "..."],
+  },
+  externals: {
+    google: "google",
   },
 };

@@ -2,5 +2,7 @@
   "name": "Carluccio's",
   "color_palette": {
     "primary": "#000000"
-  }
+  },
+  "googleApiKey": "AIzaSyDZNQlSlEIkFAct5VzUtsP4dSbvOr2bE18",
+  "liveApiKey": "f9793d745251606fe514baf26685592c"
 }

@@ -1,8 +1,8 @@
 export const limit = 5;
-export const radius = 300;
+export const radius = 10000;
 export const defaultQuery = "";
-export const locationInput = <HTMLInputElement>(
-  document.getElementById("location-input")
+export const locationInfo = <HTMLInputElement>(
+  document.getElementById("location-info")
 );
 export const searchButton = document.getElementById("search-location-button");
 export const useMyLocation = document.getElementById("useLocation");

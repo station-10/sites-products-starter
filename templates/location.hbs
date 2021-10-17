@@ -12,6 +12,7 @@
         "mainPhone",
         "geomodifier",
         "hours",
+        "geocodedCoordinate",
         "slug"
       ],
       "filter": {
@@ -97,9 +98,9 @@
             </div>
           </div>
         </div>
-        <div class="flex flex-col 2xl:flex-row justify-center lg:justify-between md:items-center px-10 w-full">
+        <div class="flex flex-col 2xl:flex-row justify-center lg:justify-between md:items-center px-10 w-full bg-blue">
           <div class="w-full 2xl:w-1/2">
-             <div class="p-10">{{>staticmap}}</div>
+             <div id="location-info" data={{geomodifier}} class="p-10">{{>staticmap longitude=geocodedCoordinate.longitude latitude=geocodedCoordinate.latitude}}</div>
           </div>
           <div class="w-full 2xl:w-1/2">
             <h3 class="mb-6">About Carluccio's {{geomodifier}}</h3>
@@ -115,15 +116,11 @@
           </div>
         </div>
         <div class="flex flex-col items-center mt-20 px-10">
-          <h3 class="mb-20">
-            Nearby Carluccio's Restaurants
-          </h3>
-          <div class="mb-10">
-            <h4>3 restaurants will go here...</h4>
-          </div>
+          {{>nearby longitude=geocodedCoordinate.longitude latitude=geocodedCoordinate.latitude}}
           {{>darkButton text="Find a Carluccios Restaurant" href="#"}}
         </div>
       </div>
+
       {{>footer}}
     </body>  
 </html>

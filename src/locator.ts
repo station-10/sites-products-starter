@@ -2,7 +2,7 @@ import {
   defaultQuery,
   enableAutocomplete,
   loadLocationsOnLoad,
-  locationInput,
+  locationInfo,
   searchButton,
   useMyLocation
 } from "./locator/constants";
@@ -23,7 +23,7 @@ useMyLocation.addEventListener("click", function () {
 
 window.addEventListener("popstate", function (e) {
   if (e.state && e.state.queryString) {
-    locationInput.value = e.state.queryString;
+    locationInfo.value = e.state.queryString;
     getNearestLocationsByString();
   }
 });
@@ -31,12 +31,12 @@ window.addEventListener("popstate", function (e) {
 window.addEventListener("load", function () {
   const params = getQueryParamsFromUrl();
   const queryString = params["q"] || defaultQuery;
-  locationInput.value = decodeURI(queryString);
+  locationInfo.value = decodeURI(queryString);
   getNearestLocationsByString();
 });
 
 
-locationInput.addEventListener("keydown", function (e) {
+locationInfo.addEventListener("keydown", function (e) {
   if (e.key === "Enter") {
    getNearestLocationsByString();
   }

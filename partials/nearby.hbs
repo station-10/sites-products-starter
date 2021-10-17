@@ -1,5 +1,5 @@
 <div class="bg-gray-100 p-8">
-  <h2 class="text-center mb-5">Nearby Locations</h2>
+  <h3 class="text-center mb-5">Nearby Locations</h3>
   <div class="location-data grid gap-x-5 gap-y-5 sm:px-10 md:px-0 md:grid-cols-3 lg:gap-x-20"> </div>
   {{!-- <div class="location-data justify-start grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8"> </div> --}}
 
@@ -185,8 +185,8 @@
     var baseURL = "https://liveapi.yext.com/v2/accounts/me/entities/geosearch?";
     var api_key = "{{global.liveApiKey}}";
     var vparam = "20181017";
-    var lat = {{latitude}};
-    var lng = {{longitude}};
+    var lat = "{{this.latitude}}";
+    var lng = "{{this.longitude}}";
     var location = lat + ", " + lng;
     var limit = 3;
     var radius = 500;

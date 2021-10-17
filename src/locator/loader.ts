@@ -1,7 +1,7 @@
 import {
   entityTypes,
   liveAPIKey,
-  locationInput,
+  locationInfo,
   savedFilterId,
 } from "./constants";
 import { renderLocations, renderSearchDetail } from "./locations";
@@ -29,7 +29,7 @@ export function startLoading() {
       // el.style.visibility = "hidden";
       el.innerHTML = '<div class="skeleton h-6 flex-grow mx-4 my-10"></div>';
     });
-  locationInput.disabled = true;
+  locationInfo.disabled = true;
   [].slice
     .call(document.querySelectorAll(".search") || [])
     .forEach(function (el) {
@@ -50,7 +50,7 @@ export function stopLoading() {
     .forEach(function (el) {
       el.style.visibility = "visible";
     });
-  locationInput.disabled = false;
+  locationInfo.disabled = false;
   [].slice
     .call(document.querySelectorAll(".search") || [])
     .forEach(function (el) {

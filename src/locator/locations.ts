@@ -12,7 +12,7 @@ import { i18n } from "../i18n";
 import {
   base_url,
   limit,
-  locationInput,
+  locationInfo,
   locationNoun,
   locationNounPlural,
   locationOption,
@@ -291,7 +291,7 @@ export function renderSearchDetail(geo, visible, total, queryString) {
 }
 
 export function getNearestLocationsByString() {
-  const queryString = locationInput.value;
+  const queryString = locationInfo.getAttribute("data");
   if (queryString.trim() !== "") {
     var request_url = base_url + "entities/geosearch";
 

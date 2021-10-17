@@ -1,14 +1,16 @@
 <div>
-  <img
-    class="w-full"
-    alt="Static Google map for {{name}} - {{neighborhood}}"
-    width="300"
-    height="200"
-    src="https://maps.googleapis.com/maps/api/staticmap?size=600x400&maptype=roadmap
-       &markers=color:red%7C
-      {{this.latitude}}
-       ,
-      {{this.longitude}}
-       &key={{global.googleApiKey}}&zoom=15"
-  />
+  <a href="https://www.google.com/maps/place/{{this.latitude}},{{this.longitude}}">
+    <img
+      class="w-full"
+      alt="Static Google map for {{name}} - {{neighborhood}}"
+      width="300"
+      height="200"
+      src="https://maps.googleapis.com/maps/api/staticmap?size=600x400&maptype=roadmap
+        &markers=color:red%7C
+        {{this.latitude}}
+        ,
+        {{this.longitude}}
+        &key={{global.googleApiKey}}&zoom=15"
+    />
+  </a>
 </div>

@@ -70,7 +70,7 @@
       <div class="mt-10"></div>
       {{>heroBanner title=geomodifier }}
       <div class="md:px-40 lg:px-60 xl:px-80 mb-20">
-        <div class="flex flex-col lg:flex-row w-full lg:justify-between px-10 lg:px-0 items-start my-10">
+        <div class="flex flex-col lg:flex-row w-full lg:justify-between px-10 lg:px-0 mt-10 items-start">
           <div class="flex flex-col w-full lg:w-1/3 mb-8">
             <h3 class="mb-4">Address</h3>
             <div class="mb-6">
@@ -79,7 +79,7 @@
               <p>{{address.postalCode}}</p>
             </div>
             <div class="mb-6">
-              {{>lightButton text="GET DIRECTIONS" href="#" darkBorder="true"}}
+              {{>lightButton text="GET DIRECTIONS" href="https://www.google.com/maps/place" darkBorder="true" longitude=geocodedCoordinate.longitude latitude=geocodedCoordinate.latitude}}
             </div>
           </div>
           <div class="flex flex-col md:items-center w-full lg:w-1/3 mb-8">
@@ -89,35 +89,38 @@
               <p>{{mainPhone}}</p>
             </div>
           </div>
-          <div class="flex flex-col md:items-center w-full lg:w-1/3 mb-8">
+          <div class="flex flex-col md:items-end w-full lg:w-1/3 mb-8">
             <h3 class="mb-4">Hours</h3>
             {{>hours hours}}
-            <div class="flex justify-start w-full">
+            <div class="flex justify-end w-full">
             {{>deliveryIcons}}
 
             </div>
           </div>
         </div>
         <div class="flex flex-col 2xl:flex-row justify-center lg:justify-between md:items-center px-10 w-full bg-blue">
-          <div class="w-full 2xl:w-1/2">
+          <div class="w-full 2xl:w-1/2 mx-5">
              <div id="location-info" data={{geomodifier}} class="p-10">{{>staticmap longitude=geocodedCoordinate.longitude latitude=geocodedCoordinate.latitude}}</div>
           </div>
-          <div class="w-full 2xl:w-1/2">
+          <div class="w-full 2xl:w-1/2 mx-5">
             <h3 class="mb-6">About Carluccio's {{geomodifier}}</h3>
             <p class="mb-10">{{description}}</p>
             <div class="flex flex-col xl:flex-row justify-evenly">
               <div class="p-2">
-                {{>lightButton text="GET DIRECTIONS" darkBorder="true"}}
+                {{>lightButton text="GET DIRECTIONS" href="https://www.google.com/maps/place" darkBorder="true" longitude=geocodedCoordinate.longitude latitude=geocodedCoordinate.latitude}}
               </div>
               <div class="p-2">
-                {{>lightButton text="VIEW MENU" darkBorder="true"}}
+                {{>lightButton text="VIEW MENU" href="https://www.carluccios.com/menu/" darkBorder="true"}}
               </div>
             </div>
           </div>
         </div>
-        <div class="flex flex-col items-center mt-20 px-10">
+        <div class="flex flex-col items-center px-10">
           {{>nearby longitude=geocodedCoordinate.longitude latitude=geocodedCoordinate.latitude}}
-          {{>darkButton text="Find a Carluccios Restaurant" href="#"}}
+          <div class="mt-5">
+          {{>darkButton text="Find a Carluccios Restaurant" href="https://www.carluccios.com/restaurants/"}}
+
+          </div>
         </div>
       </div>
 

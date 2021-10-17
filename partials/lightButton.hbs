@@ -1,7 +1,7 @@
 {{#if darkBorder}}
   <a
     class="bg-transparent hover:bg-primary max-w-xs relative flex items-center justify-center h-10 pt-5 pb-5 pl-10 pr-10 text-primary whitespace-nowrap hover:text-white border-1 border-primary"
-    href={{this.href}}
+    href={{#if this.latitude}}"{{this.href}}/{{this.latitude}},{{this.longitude}}"{{else}}{{this.href}}{{/if}}
   >
     <p class="">{{this.text}}</p>
     <div
@@ -12,7 +12,7 @@
 {{else}}
   <a
     class="bg-transparent hover:bg-white relative max-w-xs flex items-center justify-center h-10 pt-5 pb-5 pl-10 pr-10 text-white whitespace-nowrap hover:text-primary border-1 border-white"
-    href={{this.href}}
+    href={{#if this.latitude}}"{{this.href}}/{{this.latitude}},{{this.longitude}}"{{else}}{{this.href}}{{/if}}
   >
     <p class="">{{this.text}}</p>
     <div
